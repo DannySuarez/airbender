@@ -3,11 +3,13 @@ import Component from './Component.js';
 class AirbenderItem extends Component {
 
     renderTemplate() {
+        const character = this.props.character;
+        const src = character.photoUrl || './assets/placeholder.png';
         return /*html*/ `
             <li class="airbender-item">
-                <h2></h2>
-                <img src="" alt="">
-                <p>Weapon: </p>
+                <h2>${character.name}</h2>
+                <img src="${src}" alt="${character.name}">
+                <p>Weapon: ${character.weapon}</p>
             </li>
         `;
     }
