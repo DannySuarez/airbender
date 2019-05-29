@@ -7,8 +7,8 @@ QUnit.module('Airbender Item');
 test('render template from data', assert => {
     const character = {
         photoUrl: 'https://vignette.wikia.nocookie.net/avatar/images/7/79/Pilot_-_Aang.png/revision/latest?cb=20120311133235',
-        name: 'Aang (pilot)',
-        weapon: 'Air, '
+        name: 'Aang',
+        weapon: 'Air'
     };
 
     const airbenderItem = new AirbenderItem({ character });

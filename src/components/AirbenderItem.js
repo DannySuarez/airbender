@@ -4,7 +4,7 @@ class AirbenderItem extends Component {
 
     renderTemplate() {
         const character = this.props.character;
-        const src = character.photoUrl || './assets/placeholder.png';
+        const src = character.photoUrl || './assets/placeholder.jpg';
         return /*html*/ `
             <li class="airbender-item">
                 <h2>${character.name}</h2>
