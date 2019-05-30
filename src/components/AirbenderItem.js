@@ -4,12 +4,21 @@ class AirbenderItem extends Component {
 
     renderTemplate() {
         const character = this.props.character;
+
+        const enemyLink = new URLSearchParams();
+        enemyLink.set('enemies', character.name);
+
+        const allyLink = new URLSearchParams();
+        allyLink.set('allies', character.name);
+
         const src = character.photoUrl || './assets/placeholder.jpg';
+
         return /*html*/ `
             <li class="airbender-item">
-                <h2>${character.name}</h2>
                 <img src="${src}" alt="${character.name}">
-                <p>Weapon: ${character.weapon}</p>
+                <h2>${character.name}</h2>
+                <a href="#${enemyLink.toString()}">Enemies</a>
+                <a href="#${allyLink.toString()}">Allies</a>
             </li>
         `;
     }
